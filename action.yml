@@ -1,0 +1,24 @@
+name: 'Check Long Standing Pr'
+description: 'Pick member randomly from pre-defined group and assign as reviewer.'
+inputs:
+  github-token:
+    description: '`GITHUB_TOKEN` from Action Workflow'
+    required: true
+  repo-owner:
+    description: 'Repository Org'
+    required: true
+  repo-name:
+    description: 'Repository Name'
+    required: true
+  day:
+    description: 'Check For After Given Day'
+    required: true
+    default: 3
+  ignore-draft:
+    description: 'If enabled, PR in Draft status will not be checked for Long Standing'
+    required: true
+    default: false
+outputs: { }
+runs:
+  using: node16
+  main: dist/main/index.js
