@@ -21,4 +21,4 @@ inputs:
 outputs: { }
 runs:
   using: node16
-  main: dist/main/index.js
+  main: dist/main/src/index.js
